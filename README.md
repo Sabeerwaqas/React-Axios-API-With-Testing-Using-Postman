@@ -4,3 +4,11 @@
 </h1>
 <p>
 🚀 This project encouraged me to work with Axios to get, post, patch, and delete data from the JSON server. Furthermore, I am using Postman in this project for testing API. 🧪</p>
+<p>
+    Below is the URL of the tutorial I follow to learn JSON server.
+</p>
+<div>
+    <a href="https://www.youtube.com/watch?v=ZEKBDXGnD4s">React Axios API Requests | Axios with React JS Tutorial
+</a>
+</div>
+
