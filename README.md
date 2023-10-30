@@ -3,5 +3,4 @@
     React ⚛️ Axios 🚀 API 🔗 Testing 🧪 Using Postman 📮
 </h1>
 <p>
-  This project encouraged me to work with Axios to get, post, patch, and delete data from the JSON server. Furthermore, I am using postman in this project to for testing API.
-</p>
+🚀 This project encouraged me to work with Axios to get, post, patch, and delete data from the JSON server. Furthermore, I am using Postman in this project for testing API. 🧪</p>
