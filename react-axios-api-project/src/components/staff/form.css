@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input-name {
+    width: 20vw;
+    height: 5vh;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.input-designation{
+    width: 20vw;
+    height: 5vh;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+
+.form-btn{
+    background-color: black;
+    color: white;
+    margin-left: 40%;
+    margin-top: 1%;
+    width: 20vw;
+    padding: 0.3%;
+}
