@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import "./form.css";
 
 const CreateStaff = () => {
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
   const [staffList, setStaffList] = useState([]);
+  const [isUpdateMode, setIsUpdateMode] = useState(false);
+  const [updateID, setUpdateID] = useState(null);
 
-  const api = "https://653f47849e8bd3be29e025f9.mockapi.io/staffData";
+  const api = "https://6540c94845bedb25bfc29bac.mockapi.io/staffData";
 
   const fetchData = () => {
     axios
@@ -24,24 +28,43 @@ const CreateStaff = () => {
     fetchData();
   }, []);
 
-  const addStaff = (e) => {
+  const addOrUpdateStaff = (e) => {
     e.preventDefault();
 
     if (name && position) {
-      axios
-        .post(api, {
-          name,
-          position,
-        })
-        .then((response) => {
-          console.log("Data posted successfully:", response.data);
-          setName("");
-          setPosition("");
-          fetchData();
-        })
-        .catch((error) => {
-          console.error("Error posting data:", error);
-        });
+      if (isUpdateMode && updateID) {
+        axios
+          .put(`${api}/${updateID}`, {
+            name,
+            position,
+          })
+          .then((response) => {
+            console.log("Data updated successfully:", response.data);
+            setName("");
+            setPosition("");
+            setIsUpdateMode(false);
+            setUpdateID(null);
+            fetchData();
+          })
+          .catch((error) => {
+            console.error("Error updating data:", error);
+          });
+      } else {
+        axios
+          .post(api, {
+            name,
+            position,
+          })
+          .then((response) => {
+            console.log("Data posted successfully:", response.data);
+            setName("");
+            setPosition("");
+            fetchData();
+          })
+          .catch((error) => {
+            console.error("Error posting data:", error);
+          });
+      }
     } else {
       console.log("Please provide name and position");
     }
@@ -49,21 +72,12 @@ const CreateStaff = () => {
 
   const updateStaff = (id) => {
     const staffToUpdate = staffList.find((staff) => staff.id === id);
+
     if (staffToUpdate) {
-      axios
-        .put(`${api}/${id}`, {
-          name: name || staffToUpdate.name,
-          position: position || staffToUpdate.position,
-        })
-        .then((response) => {
-          console.log("Data updated successfully:", response.data);
-          setName("");
-          setPosition("");
-          fetchData();
-        })
-        .catch((error) => {
-          console.error("Error updating data:", error);
-        });
+      setName(staffToUpdate.name);
+      setPosition(staffToUpdate.position);
+      setIsUpdateMode(true);
+      setUpdateID(id);
     }
   };
 
@@ -82,7 +96,7 @@ const CreateStaff = () => {
   return (
     <>
       <main className="form-container">
-        <form onSubmit={addStaff}>
+        <form onSubmit={addOrUpdateStaff}>
           <div>
             <input
               className="input-name"
@@ -102,7 +116,7 @@ const CreateStaff = () => {
             />
           </div>
           <button className="form-btn" type="submit">
-            Add Staff
+            {isUpdateMode ? "Update Staff" : "Add Staff"}
           </button>
         </form>
       </main>
@@ -121,8 +135,12 @@ const CreateStaff = () => {
                 <td>{staff.name}</td>
                 <td>{staff.position}</td>
                 <td>
-                  <button onClick={() => updateStaff(staff.id)}>Edit</button>
-                  <button onClick={() => deleteStaff(staff.id)}>Delete</button>
+                  <button onClick={() => updateStaff(staff.id)}>
+                    <EditIcon />
+                  </button>
+                  <button onClick={() => deleteStaff(staff.id)}>
+                    <DeleteIcon />
+                  </button>
                 </td>
               </tr>
             ))}
