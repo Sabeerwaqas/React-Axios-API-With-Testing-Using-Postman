@@ -1,14 +1,22 @@
-![api-512d36c09662682717108a38bbb5c57d](https://github.com/Sabeerwaqas/React-Axios-API-With-Testing-Using-Postman/assets/71982222/dc007398-eec1-4eac-8821-d6d52f02c2a7)
+![1__rwabWXXSMAgY0TBbUd3FQ](https://github.com/Sabeerwaqas/React-Axios-API-With-Testing-Using-Postman/assets/71982222/abe336a1-46d2-4a97-afd4-21e6cd116a2b)
+
+
 <h1>
     React ⚛️ Axios 🚀 API 🔗 Testing 🧪 Using Postman 📮
 </h1>
 <p>
-🚀 This project encouraged me to work with Axios to get, post, patch, and delete data from the JSON server. Furthermore, I am using Postman in this project for testing API. 🧪</p>
-<p>
-    Below is the URL of the tutorial I follow to learn JSON server.
-</p>
-<div>
-    <a href="https://www.youtube.com/watch?v=ZEKBDXGnD4s">React Axios API Requests | Axios with React JS Tutorial
-</a>
-</div>
+🚀 This project encouraged me to work with Axios to get, post, patch, and delete data from the API. Furthermore, I have used Postman in this project for testing API. 🧪</p>
 
+<div>
+    <p>
+        While I was using Postman, I realized that testing an API is a fundamental part of any real-world application. Postman provides a great user interface as well as a user experience to test an API and check the fundamental requests and their responses. This was the first time I have explored any API testing tool and I have gained practical knowledge. The knowledge I have explored about the Postman is mentioned below:
+    </p>
+    <ul>
+        <li>
+            What is an API?
+        </li>
+        <li>
+            Create an HTTP request using GET, POST, PATCH, and DELETE methods.
+        </li>
+    </ul>
+</div>
