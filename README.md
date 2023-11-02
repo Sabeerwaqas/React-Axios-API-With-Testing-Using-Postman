@@ -44,4 +44,9 @@
         Below is the link to a project I have built to gain a piece of practical knowledge on API testing.
     </p>
     <a href="https://post-man-api-testing.web.app/" target="_blank">Postman API Testing Project</a>
+    <p>
+        <b>
+            Overall, I enjoyed my journey of learning API testing using Postman.
+        </b>
+    </p>
 </div>
