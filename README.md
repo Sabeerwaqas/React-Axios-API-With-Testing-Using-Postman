@@ -16,7 +16,32 @@
             What is an API?
         </li>
         <li>
+            Create a workspace
+        </li>
+        <li>
+            Create a collection
+        </li>
+        <li>
+            Variables in Postman
+        </li>
+        <li>
+            Query parameter
+        </li>
+        <li>
+            Variable path
+        </li>
+        <li>
             Create an HTTP request using GET, POST, PATCH, and DELETE methods.
+            <ol>
+                <li>GET method</li>
+                <li>POST method</li>
+                <li>PATCH method</li>
+                <li>DELETE method</li>
+            </ol>
         </li>
     </ul>
+    <p>
+        Below is the link to a project I have built to gain a piece of practical knowledge on API testing.
+    </p>
+    <a href="https://post-man-api-testing.web.app/" target="_blank">Postman API Testing Project</a>
 </div>
